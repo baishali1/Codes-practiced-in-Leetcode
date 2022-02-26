@@ -87,11 +87,9 @@ class Solution
         
         for(a=head;a->next!=NULL;a=a->next){
             count++;
-            
         }
-        int b[count]={};
         
-        a=head;
+        int b[count]={};
         
         for(a=head;a->next!=NULL;a=a->next){
             b[i]=a->data;
@@ -101,12 +99,12 @@ class Solution
         if (a->next==NULL){
             b[i]=a->data;
         }
-        
-        a=head;
+    
         for(a=head;a->next!=NULL;a=a->next){
             a->data=b[i];
             i--;
         }
+        
         if (a->next==NULL){
             a->data=b[i];
         }
