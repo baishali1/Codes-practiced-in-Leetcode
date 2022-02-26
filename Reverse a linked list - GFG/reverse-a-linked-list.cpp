@@ -38,7 +38,7 @@ class Solution
         // code here
         // return head of reversed list
         
-        Node *a;
+       /* Node *a;
         a=head;
         int count=1;
         int i=0;
@@ -75,12 +75,44 @@ class Solution
             a->data=b[i];
         }
         
-        //for(a=head;a->next!=NULL; a=a->next){
-           // cout<<a->data;
-    //}
-           return(head);
-           
+       return(head);  */
+       
+     ////////////////////////////////////////////////////////////////////////      
+      
+        Node *a;
+        a=head;
+        int count=1;
+        int i=0;
+        int j;
         
+        for(a=head;a->next!=NULL;a=a->next){
+            count++;
+            
+        }
+        int b[count]={};
+        
+        a=head;
+        
+        for(a=head;a->next!=NULL;a=a->next){
+            b[i]=a->data;
+            i++;
+        }
+        
+        if (a->next==NULL){
+            b[i]=a->data;
+        }
+        
+        a=head;
+        for(a=head;a->next!=NULL;a=a->next){
+            a->data=b[i];
+            i--;
+        }
+        if (a->next==NULL){
+            a->data=b[i];
+        }
+        
+       return(head);
+             
         
     }
     
