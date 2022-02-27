@@ -10,7 +10,7 @@ class Solution{
     vector<pair<int,int>> allPairs(int A[], int B[], int N, int M, int X)
     {
         // Your code goes here   
-        int i,j;
+        /*int i,j;
         vector<pair<int,int>>v;
         
         for(i=0;i<N;i++){
@@ -22,6 +22,20 @@ class Solution{
             }
         }
         sort(v.begin(),v.end());
+        return(v);   */
+        
+        int i,j,k;
+        
+        vector<pair<int,int>>v;
+        sort(A,A+N);
+        sort(B,B+M);
+        
+        for(i=0;i<N;i++){
+            k=lower_bound(B,B+M,X-A[i])-B;
+            if(X-A[i]==B[k]){
+                v.push_back({A[i],B[k]}); 
+            }
+        }
         return(v);
         
     }
