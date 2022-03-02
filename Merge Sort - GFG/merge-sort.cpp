@@ -23,10 +23,10 @@ class Solution
     {
          // Your code here
          
-         int k=l;
+       int k=l;
        int i=l;
        int j=m+1;
-       int B[r+1];
+       int B[r];
        while(i<=m && j<=r)
        {
            if(arr[i]<arr[j])
