@@ -11,7 +11,7 @@ class Solution
     void sort012(int a[], int n)
     {
         // coode here 
-        //sort(a,a+n);
+        
         int x,i,j;
         x=0;
         for(i=0;i<3;i++){
@@ -21,7 +21,7 @@ class Solution
                     x++;
                 }
             }
-        }
+        }        
     }
     
 };
