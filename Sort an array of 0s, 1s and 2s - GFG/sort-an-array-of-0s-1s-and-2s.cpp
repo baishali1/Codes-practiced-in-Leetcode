@@ -11,7 +11,17 @@ class Solution
     void sort012(int a[], int n)
     {
         // coode here 
-        sort(a,a+n);
+        //sort(a,a+n);
+        int x,i,j;
+        x=0;
+        for(i=0;i<3;i++){
+            for(j=0;j<n;j++){
+                if(a[j]==i){
+                    swap(a[x],a[j]);
+                    x++;
+                }
+            }
+        }
     }
     
 };
