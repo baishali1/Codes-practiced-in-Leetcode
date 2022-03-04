@@ -37,6 +37,7 @@ class Solution
     {
         // code here
         // return head of reversed list
+        // It is done using while loop
         
        /* Node *a;
         a=head;
@@ -63,8 +64,6 @@ class Solution
             b[i]=a->data;
         }
         
-       
-        
         a=head;
         while(a->next!=NULL){
             a->data=b[i];
@@ -78,36 +77,38 @@ class Solution
        return(head);  */
        
      ////////////////////////////////////////////////////////////////////////      
+      // It is done using for loop
       
         Node *a;
         a=head;
-        int count=1;
+        int count=0;
         int i=0;
         int j;
         
-        for(a=head;a->next!=NULL;a=a->next){
+        for(a=head;a!=NULL;a=a->next){
             count++;
         }
         
         int b[count]={};
         
-        for(a=head;a->next!=NULL;a=a->next){
-            b[i]=a->data;
-            i++;
+        for(a=head;a!=NULL;a=a->next){
+            b[i++]=a->data;
+            //i++;
         }
         
-        if (a->next==NULL){
-            b[i]=a->data;
-        }
+        //if (a->next==NULL){
+          //  b[i]=a->data;
+        //}
+        i=i-1;
     
-        for(a=head;a->next!=NULL;a=a->next){
-            a->data=b[i];
-            i--;
+        for(a=head;a!=NULL;a=a->next){
+            a->data=b[i--];
+            //i--;
         }
         
-        if (a->next==NULL){
-            a->data=b[i];
-        }
+        //if (a->next==NULL){
+            //a->data=b[i];
+        //}
         
        return(head);
              
