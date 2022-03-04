@@ -17,12 +17,34 @@ class Solution
         for(i=0;i<3;i++){
             for(j=0;j<n;j++){
                 if(a[j]==i){
-                    swap(a[x],a[j]);
-                    x++;
+                    swap(a[x++],a[j]);
+                    //x++;
                 }
             }
         }        
     }
+    
+    
+    /*int temp,temp1,i,j,d;
+
+temp=0;
+i=0;
+d=0;
+
+    while(temp<3){ //0,2,1,2,0
+        //d=i; //to track the position of j
+        for(j=i;j<n;j++){
+          if(a[j]==temp){
+              temp1=a[i];
+              a[i]=a[j];
+              a[j]=temp1;
+              i++;
+              d=j+1;
+          } 
+      
+    }
+     temp++;
+     */
     
 };
 
