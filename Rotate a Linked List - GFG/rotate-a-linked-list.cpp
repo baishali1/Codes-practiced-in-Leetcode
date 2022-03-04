@@ -38,7 +38,7 @@ class Solution
         Node* a;
         Node* b;
         Node* c;
-        Node* d;
+        //Node* d;
         c=head;
         int i;
         int count=1;
