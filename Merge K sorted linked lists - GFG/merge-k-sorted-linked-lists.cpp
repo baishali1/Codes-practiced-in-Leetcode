@@ -51,26 +51,25 @@ class Solution{
            // Your code here
            vector<int>v;
            int i;
-           for(i=0;i<K;i++)
-           {
-               Node* a=arr[i];
-               while(a!=NULL)
-               {
+           for(i=0;i<K;i++){
+               Node *a=arr[i];
+               while(a!=NULL){
                    v.push_back(a->data);
                    a=a->next;
                }
            }
-        sort(v.begin(),v.end());
-        Node* head=new Node(v[0]);
-        Node* x=head;
-        
-        for(i=1;i<v.size();i++)
-        {
-            Node* c=new Node(v[i]);
-            x->next=c;
-            x=x->next; 
-        }
-        return(head);
+           sort(v.begin(),v.end());
+           
+           Node *head=new Node(v[0]);
+           Node *x=head;
+           
+           for(i=1;i<v.size();i++){
+               Node *c=new Node(v[i]);
+               x->next=c;
+               x=x->next;
+               
+           }
+           return(head);
            
     }
 };
