@@ -80,10 +80,9 @@ class Solution
       // It is done using for loop
       
         Node *a;
-        a=head;
         int count=0;
         int i=0;
-        int j;
+      
         
         for(a=head;a!=NULL;a=a->next){
             count++;
