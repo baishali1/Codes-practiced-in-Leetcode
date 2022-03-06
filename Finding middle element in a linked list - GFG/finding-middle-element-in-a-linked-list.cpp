@@ -53,8 +53,9 @@ class Solution{
             count=count+1;
             a=a->next;
         }
+        //cout<<count<<endl;
         a=head;
-        //for(a=head;a!=count/2+1;a->next){
+        
         while(i!=(count/2)+2){
             b=a->data;
             a=a->next;
