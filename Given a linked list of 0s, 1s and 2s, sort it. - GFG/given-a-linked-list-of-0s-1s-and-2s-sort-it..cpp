@@ -37,50 +37,52 @@ class Solution
         
         // Add code here
         
-   int onecount=0;
-   int twocount=0;
-   int zerocount=0;
-   Node*temp=head;
-   while(temp!=NULL){
-      if(temp->data==0)
-      zerocount++;
-   
-       else if(temp->data==1)
-           onecount++;
-       
-       
-        else if(temp->data==2)
-       twocount++;
-       
-       temp=temp->next;
-      
-   }
-   
-   temp=head;
-   while(temp!=NULL){
-       
-       if(zerocount!=0){
-           temp->data=0;
-           zerocount--;
-       }
-      else if(onecount!=0){
-           temp->data=1;
-           onecount--;
-       }
-       else if(twocount!=0){
-           temp->data=2;
-           twocount--;
-       }
-       
-       temp=temp->next;
-       
-       
-       
-       
-   }
-   return head;
-       
-
+        int zerocount=0;
+        int onecount=0;
+        int twocount=0;
+        
+        Node *temp=head;
+        while(temp!=NULL){
+            if(temp->data==0){
+                zerocount++;
+            }
+             else if(temp->data==1){
+                onecount++;
+            }
+             else //(temp->data==2)
+             {
+                twocount++;
+            }
+            temp=temp->next;
+            
+        }
+        
+        temp=head;
+        while(temp!=NULL){
+            
+            if(zerocount!=0){
+                temp->data=0;
+                //temp=temp->next;
+                zerocount--;
+                
+            }
+             else if(onecount!=0){
+                temp->data=1;
+               // temp=temp->next;
+                onecount--;
+                
+            }
+             else if(twocount!=0){
+                temp->data=2;
+               // temp=temp->next;
+                twocount--;
+                
+            }
+            temp=temp->next;
+            
+            
+        }
+        return(head);
         
     }
 };
