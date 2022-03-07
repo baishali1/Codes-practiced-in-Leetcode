@@ -18,7 +18,7 @@ class Solution{
         sort(arr+l,arr+(r+1));
         //cout<<l<<endl;
         //cout<<r<<endl;
-        return(arr[l+(k-1)]);
+        return(arr[k-1]);
     }
 };
 
