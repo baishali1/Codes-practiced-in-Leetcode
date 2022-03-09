@@ -11,33 +11,29 @@ class Solution
     //Function to reverse words in a given string.
     string reverseWords(string S) 
     { 
-        // code here
+        // code here 
+        
         vector<string>v;
-        string st;
+        string st="";
         int i;
-        for(i=0;i<S.size();i++)
-        {
-            if(S[i]=='.')
-            {
+        for(i=0;i<S.size();i++){
+            if(S[i]=='.'){
                 v.push_back(st);
                 st="";
+                
             }
-            else
-            {
+            else{
                 st.push_back(S[i]);
             }
-          
+            
         }
         v.push_back(st);
         S="";
-        for(i=v.size()-1;i>-1;i--)
-        {
+        for(i=v.size()-1;i>=0;i--){
             S=S+v[i];
-            if(i!=0)
-            {
+            if(i!=0){
                 S.push_back('.');
             }
-            
         }
         return(S);
         
