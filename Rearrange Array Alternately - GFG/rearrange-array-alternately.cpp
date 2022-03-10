@@ -17,44 +17,18 @@ class Solution{
     { 
     	
     	// Your code here
-    	/*long long int arr1[n]={};
-    	int i,j;
-    	int k;
-    	j=n-1;
-    	i=0;
-    	
-    	for(k=0;k<n;k=k+2){
-    	    arr1[k]=arr[j];
-    	    arr1[k+1]=arr[i];
-    	    j--;
-    	    i++;
-    	    /*if(i==j){
-    	        arr1[k+1]=arr[i];
-    	        break;
-    	    }
-    	    if(i>j){
-    	        break;
-    	    }
-    	} 
-    	
-    	for(i=0;i<n;i++){
-    	    arr[i]=arr1[i];
-    	} */
-    	
-    vector<int>v;
     	int i;
-    	for(i=0;i<n-i;i++)
-    	{
+    	vector<int>v;
+    	for(i=0;i<n-i;i++){
     	    v.push_back(arr[n-i-1]);
     	    v.push_back(arr[i]);
     	}
-    	for(i=0;i<n;i++)
-    	{
+    	    
+    	
+    	for(i=0;i<n;i++){
     	    arr[i]=v[i];
-    	}	
-    	
-    	
-  	 
+    	}
+    	 
     }
 };
 
