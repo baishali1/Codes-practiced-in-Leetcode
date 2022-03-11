@@ -1,5 +1,5 @@
 # Check if string is rotated by two places
-## Easy 
+##  Easy 
 <div class="problem-statement">
                 <p></p><p><span style="font-size:18px">Given two strings&nbsp;a&nbsp;and&nbsp;b. The task is to find if the string 'b'&nbsp;can be&nbsp;obtained&nbsp;by&nbsp;rotating&nbsp;another string 'a'&nbsp;by&nbsp;exactly 2&nbsp;places.</span></p>
 
