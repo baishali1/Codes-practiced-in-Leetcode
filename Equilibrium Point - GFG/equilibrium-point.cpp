@@ -11,81 +11,23 @@ class Solution{
     // n: size of array
     int equilibriumPoint(long long a[], int n) {
     
-        // Your code here //brute force
-        
-        int i,l,k,rs,ls,j;
-
-        if(n==1){
-            return(1);
+        // Your code here
+        int sum=0;
+        int left=0;
+        int i;
+        for(i=0;i<n;i++){
+            sum+=a[i];
         }
-        if(n==2){
-            return(-1);
-        }
-        
-       /* for(i=1;i<n-1;i++){
-            k=i-1;
-            l=i+1;
-            ls=0;
-            rs=0;
-            while(k>=0){
-                ls=ls+a[k];
-                k--;
-            }
-            while(l<n){
-                rs=rs+a[l];
-                l++;
-            }
-            if(ls==rs){
+        for(i=0;i<n;i++){
+            sum=sum-a[i];
+            if(left==sum){
                 return(i+1);
             }
-                
+            left=left+a[i];
         }
-        return(-1); */
+        return(-1);
         
-       /* sum=0;
-        for(i=0;i<n;i++){
-            sum=sum+a[i];
-        }
-        
-        j=1;
-        while(j<n-1){
-             rs=0;
-             ls=0;
-             
-            for(i=0;i<j;i++){
-                rs=rs+a[i];
-            }
-        ls=sum-rs-a[i];
-        
-        if(ls==rs){
-            return(i+1);
-       
-        }
-        j++;
-                
     }
-        return(-1); */
-        
-    int sum=0,left=0;
-    
-        for(int i=0;i<n;i++)
-    {
-        sum+=a[i];
-    }
-    for(int i=0;i<n;i++)
-    {
-        sum-=a[i];
-        //left-sum;
-        if(left==sum)
-        {
-            return i+1;
-        }
-        left+=a[i];
-    }
-    return -1; 
-       }
-        
-    
 
 };
 
