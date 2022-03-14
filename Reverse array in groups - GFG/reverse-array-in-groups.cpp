@@ -13,14 +13,14 @@ public:
     //Function to reverse every sub-array group of size k.
     void reverseInGroups(vector<long long>& arr, int n, int k){
         // code here
-        int i,j;
+        int i;
         for(i=0;i<n;i=i+k){
             if(i+k>=n){
                 reverse(arr.begin()+i,arr.end());
             }
             else{
-                j=i+k;
-                reverse(arr.begin()+i,arr.begin()+j);
+                //j=i+k;
+                reverse(arr.begin()+i,arr.begin()+(i+k));
             }
         }
     }
