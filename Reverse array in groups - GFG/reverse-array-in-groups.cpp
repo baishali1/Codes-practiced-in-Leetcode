@@ -17,7 +17,8 @@ public:
         int i,j;
         
         for(i=0;i<n;i=i+k){
-            if(i+k>=n){
+            //if((n-i-1)<((i+k-1)-i) || k>=n){
+              if(i+k>=n){
                 reverse(arr.begin()+i,arr.end());
             }
             else {
