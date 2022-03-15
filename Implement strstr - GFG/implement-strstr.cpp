@@ -36,14 +36,12 @@ int strstr(string s, string x)
                      count=1;
                      break;
                  }
+             }
+             if(count==0){
+                 return i;
+             }
          }
-         if(count == 0){
-             return i;
-         }
-         
-         }
-     
-     } 
+     }
      return -1;
      
 }
