@@ -13,11 +13,11 @@ public:
 	    // code here //brute force
 	    
 	    int i,j,k;
-	    vector<int>v;
+	   // vector<int>v;
 	    sort(arr,arr+n);
-	    for(i=0;i<n;i++){
+	    /*for(i=0;i<n;i++){
 	        v.push_back(pow(arr[i],2));
-	    }
+	    } */
 	    
 	    for(i=0;i<n-2;i++){
 	        for(j=i+1;j<n-1;j++){
