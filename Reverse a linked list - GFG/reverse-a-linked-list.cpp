@@ -77,7 +77,7 @@ class Solution
        return(head);  */
        
      ////////////////////////////////////////////////////////////////////////      
-      // It is done using for loop
+      // It is done using for loop // not efficient done with extra space
       
         Node *a;
         int count=0;
@@ -92,23 +92,15 @@ class Solution
         
         for(a=head;a!=NULL;a=a->next){
             b[i++]=a->data;
-            //i++;
+         
         }
-        
-        //if (a->next==NULL){
-          //  b[i]=a->data;
-        //}
+   
         i=i-1;
     
         for(a=head;a!=NULL;a=a->next){
             a->data=b[i--];
-            //i--;
         }
-        
-        //if (a->next==NULL){
-            //a->data=b[i];
-        //}
-        
+
        return(head);
              
         
