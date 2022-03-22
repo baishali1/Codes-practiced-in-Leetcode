@@ -37,73 +37,22 @@ class Solution
     {
         // code here
         // return head of reversed list
-        // It is done using while loop
-        
-       /* Node *a;
-        a=head;
-        int count=1;
-        int i=0;
-        int j;
-        
-        while(a->next!=NULL){
-            count++;
-            a=a->next;
-          
-        }
-        int b[count]={};
-        
-        a=head;
-        
-        while(a->next!=NULL){
-            b[i]=a->data;
-            a=a->next;
-            i++;
-        }
-        
-        if (a->next==NULL){
-            b[i]=a->data;
-        }
-        
-        a=head;
-        while(a->next!=NULL){
-            a->data=b[i];
-            i--;
-            a=a->next;
-        }
-        if (a->next==NULL){
-            a->data=b[i];
-        }
-        
-       return(head);  */
-       
-     ////////////////////////////////////////////////////////////////////////      
-      // It is done using for loop // not efficient done with extra space
-      
+        Node *temp;
+        Node *temp2;
         Node *a;
-        int count=0;
-        int i=0;
-      
-        
-        for(a=head;a!=NULL;a=a->next){
-            count++;
-        }
-        
-        int b[count]={};
-        
-        for(a=head;a!=NULL;a=a->next){
-            b[i++]=a->data;
-         
-        }
-   
-        i=i-1;
+       for(a=head;a->next!=NULL;a=a->next){
+           continue;
+       }
     
-        for(a=head;a!=NULL;a=a->next){
-            a->data=b[i--];
-        }
-
-       return(head);
-             
-        
+       temp=head;
+       while(temp!=a){
+           temp2=a->next;
+           a->next=temp;
+           temp=temp->next;
+           a->next->next=temp2;
+       }
+       return(a);
+       
     }
     
 };
