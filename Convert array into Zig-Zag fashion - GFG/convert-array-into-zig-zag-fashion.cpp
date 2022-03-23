@@ -11,26 +11,19 @@ public:
 	// Program for zig-zag conversion of array
 	void zigZag(int arr[], int n) {
 	    // code here
-	   
 	    int i,temp;
 	    
 	    for(i=0;i<n-1;i++){
-	        if(i%2==0){
-	            if(arr[i]>arr[i+1]){
-	            temp=arr[i];
-	            arr[i]=arr[i+1];
-	            arr[i+1]=temp;
-	                
+	        if(i%2==0 && arr[i]>arr[i+1]){
+	            swap(arr[i],arr[i+1]);
+	         
 	            }
+            if (i%2==1 && arr[i]<arr[i+1]){
+                swap(arr[i],arr[i+1]);
+            }
+            
 	        }
-	         else 
-	            if(arr[i]<arr[i+1]){
-	            temp=arr[i];
-	            arr[i]=arr[i+1];
-	            arr[i+1]=temp;
-	            }
-	        
-	    }
+	    
 	}
 };
 
