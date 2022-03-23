@@ -14,19 +14,16 @@ class Solution{
         n=s.size();
         int count=0;
         
-        
-       for(i=0;i<n;i++) {
-           
-           if(s[i]=='1'){
-               b=i;
-               count=count+1;
-           }
-       }
-       if(count==0){
-           return(-1);
-       }
-       else return(b);
-       
+        for(i=0;i<n;i++){
+            if(s[i]=='1'){
+                b=i;
+                count++;
+            }
+        }
+        if(count==0){
+            return(-1);
+        }
+        else return(b);
     }
 
 };
