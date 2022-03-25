@@ -42,7 +42,6 @@ class Solution{
     int getMiddle(Node *head)
     {
         // Your code here
-        
         Node *a;
         a=head;
         int count=1;
@@ -50,19 +49,18 @@ class Solution{
         int i=1;
         
         while(a->next!=NULL){
-            count=count+1;
+            count++;
             a=a->next;
         }
-        //cout<<count<<endl;
         a=head;
-        
         while(i!=(count/2)+2){
             b=a->data;
             a=a->next;
             i++;
-        
         }
         return(b);
+        
+        
     }
 };
 
