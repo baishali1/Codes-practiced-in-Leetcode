@@ -36,9 +36,9 @@ class Solution
     struct Node* reverseList(struct Node *head)
     {
         // code here
-        // return head of reversed list
+        // return head of reversed list //without using extra space //efficient
         
-        Node *prev=NULL;
+        /*Node *prev=NULL;
         Node *curr=head;
         Node *nextp=curr->next;
         
@@ -50,6 +50,45 @@ class Solution
         }
         curr->next=prev;
         return(curr);
+    } */
+    
+//with using extra space //efficient
+
+        Node *a;
+        a=head;
+        int count=1;
+        int i=0;
+        int j;
+        
+        for(a=head;a->next!=NULL;a=a->next){
+            count++;
+            
+        }
+        int b[count]={};
+        
+        a=head;
+        
+        for(a=head;a->next!=NULL;a=a->next){
+            b[i]=a->data;
+            i++;
+        }
+        
+        if (a->next==NULL){
+            b[i]=a->data;
+        }
+        
+        a=head;
+        for(a=head;a->next!=NULL;a=a->next){
+            a->data=b[i];
+            i--;
+        }
+        if (a->next==NULL){
+            a->data=b[i];
+        }
+        
+       return(head);
+             
+        
     }
     
 };
