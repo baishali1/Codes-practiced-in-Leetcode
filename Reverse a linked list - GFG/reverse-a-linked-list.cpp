@@ -37,22 +37,19 @@ class Solution
     {
         // code here
         // return head of reversed list
-        //Node *temp;
-        Node *temp2;
-        Node *a;
-       for(a=head;a->next!=NULL;a=a->next){
-           continue;
-       }
-    
-       //temp=head;
-       while(head!=a){
-           temp2=a->next;
-           a->next=head;
-           head=head->next;
-           a->next->next=temp2;
-       }
-       return(a);
-       
+        
+        Node *prev=NULL;
+        Node *curr=head;
+        Node *nextp=curr->next;
+        
+        while(nextp!=NULL){
+            curr->next=prev;
+            prev=curr;
+            curr=nextp;
+            nextp=curr->next;
+        }
+        curr->next=prev;
+        return(curr);
     }
     
 };
