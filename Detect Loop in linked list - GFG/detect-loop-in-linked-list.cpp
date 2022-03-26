@@ -49,31 +49,14 @@ class Solution
     bool detectLoop(Node* head)
     {
         // your code here
-        Node *a;
-       
-        int count=0;
-      
-       /* for(a=head;a!=NULL;a=a->next){
-            count++;
-            if(count>x){
-               return("True"); 
-            }
-        }
-        return("False"); */
-        
-        //a=head;
-        //b=head->next;
-        
-        for(a=head;a!=NULL;a=a->next){
-            count++;
-            if(count>10000){
-                return(true);
-            }
-            
-        }
-        return(false);
+        Node *slow=head,*fast=head;
+       while(fast && fast->next){
+           slow=slow->next;
+           fast=fast->next->next;
+           if(slow==fast) return true; // loop detected
+       }
+       return false;
     }
-       
 };
 
 
