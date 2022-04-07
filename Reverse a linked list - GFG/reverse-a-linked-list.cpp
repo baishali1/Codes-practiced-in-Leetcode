@@ -38,7 +38,7 @@ class Solution
         // code here
         // return head of reversed list //without using extra space //efficient
         
-        /*Node *prev=NULL;
+        Node *prev=NULL;
         Node *curr=head;
         Node *nextp=curr->next;
         
@@ -50,11 +50,11 @@ class Solution
         }
         curr->next=prev;
         return(curr);
-    } */
+    } 
     
 //with using extra space //efficient
 
-        Node *a;
+        /*Node *a;
         a=head;
         int count=1;
         int i=0;
@@ -89,7 +89,7 @@ class Solution
        return(head);
              
         
-    }
+    } */
     
 };
     
