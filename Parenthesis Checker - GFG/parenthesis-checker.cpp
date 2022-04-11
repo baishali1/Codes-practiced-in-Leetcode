@@ -15,6 +15,7 @@ class Solution
         // Your code here
         int i;
         stack<char>st;
+
         for(i=0;i<x.size();i++){
             if(x[i]=='(' || x[i]=='{' || x[i]=='['){
                 st.push(x[i]);
