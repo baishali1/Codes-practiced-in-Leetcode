@@ -32,21 +32,21 @@ struct Node {
 class Solution {
   public:
     // Function to return a list containing the inorder traversal of the tree.
-    vector<int> inOrder1(Node* root, vector<int>&v) {
-            if(root==NULL){
-                return v;
-            }
-            
-            inOrder1(root->left,v);
-            v.push_back(root->data);
-            inOrder1(root->right,v);
-            return v;
-    }
+      vector<int>v;
     vector<int> inOrder(Node* root) {
         // Your code here
-            vector<int>v;
-           return( inOrder1(root,v));
+        
+       
+   
+        if(root==NULL){
+            return v;
+        }
+       inOrder(root->left);
+       v.push_back(root->data);
+       inOrder(root->right);
+       return(v);
     }
+    
 };
 
 // { Driver Code Starts.
