@@ -9,34 +9,21 @@ class Solution
 {
     public:
     //Function to reverse words in a given string.
-    string reverseWords(string S) 
+    string reverseWords(string s) 
     { 
         // code here 
         
-        vector<string>v;
-        string st="";
-        int i;
-        for(i=0;i<S.size();i++){
-            if(S[i]=='.'){
-                v.push_back(st);
-                st="";
-                
-            }
-            else{
-                st.push_back(S[i]);
-            }
-            
-        }
-        v.push_back(st);
-        S="";
-        for(i=v.size()-1;i>=0;i--){
-            S=S+v[i];
-            if(i!=0){
-                S.push_back('.');
+        int i,j;
+        j=0;
+        reverse(s.begin(),s.end());
+        for(i=0;i<s.size();i++){
+            if(s[i]=='.' ){
+                reverse(s.begin()+j,s.begin()+i);
+                j=i+1;
             }
         }
-        return(S);
-        
+        reverse(s.begin()+j,s.begin()+i);
+        return(s);
     } 
 };
 
