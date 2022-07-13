@@ -9,29 +9,35 @@ using namespace std;
 
 class Solution{
 public:
-    string remove(string s){
+    string rremove(string s){
         // code here
-        string res="";
-       int i=0;
-	char ch;
-	int freq;
-       while(i<s.length()){
-           ch=s[i]; //
-           freq=0;
-           while(ch==s[i]){
-               freq++;
-               i++;
-           }
-           if(freq==1){
-               res+=ch; //res="ab"
-           }
-       }
-       if(res==s){
-           return res;
-       }
-       return remove(res);
-   }
-    
+       
+        int i,count,j;
+        string a;
+        count=0;
+        for(i=0;i<s.size();i++){
+            if(s[i]==s[i+1]){
+                for(j=i+1;j<s.size();j++){
+                  if(s[i]==s[j]){
+                      j++;
+                  } 
+                  if(s[i]!=s[j]){
+                      break;
+                  }
+                }
+                s.erase(s.begin()+i,s.begin()+j);
+                i--;;
+                count=1;
+            }
+        }
+         if(count==0 || s==" "){
+            return(s);
+        }
+        return(rremove(s)); //abx
+        //return("dkjsfh");
+        //return(s);
+        //return(a);
+    }
 };
 
 // { Driver Code Starts.
@@ -45,7 +51,7 @@ int main() {
         string s;
         getline(cin, s);
         Solution ob;
-        cout << ob.remove(s) << "\n";
+        cout << ob.rremove(s) << "\n";
     }
     return 0;
 }  // } Driver Code Ends
