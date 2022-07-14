@@ -136,10 +136,11 @@ vector<int> leftView1(Node *root,vector<int>&v,int &count)
        return v;
    }
    
-   count++;
+   
    if(count>v.size()){
        v.push_back(root->data);
    }
+   count++;
    leftView1(root->left,v,count);
    leftView1(root->right,v,count);
    count--;
@@ -149,7 +150,7 @@ vector<int> leftView1(Node *root,vector<int>&v,int &count)
 vector<int> leftView(Node *root)
 {
    // Your code here
-   int count=0;
+   int count=1;
    vector<int>v;
    return(leftView1(root,v,count));
 }
