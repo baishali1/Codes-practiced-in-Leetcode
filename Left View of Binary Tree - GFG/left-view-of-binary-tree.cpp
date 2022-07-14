@@ -127,79 +127,29 @@ struct Node
  */
 
 //Function to return a list containing elements of left view of the binary tree.
+
+vector<int> leftView1(Node *root,vector<int>&v,int &count)
+{
+   // Your code here
+  
+   if(root==NULL){
+       return v;
+   }
+   
+   count++;
+   if(count>v.size()){
+       v.push_back(root->data);
+   }
+   leftView1(root->left,v,count);
+   leftView1(root->right,v,count);
+   count--;
+   return v;
+}
+
 vector<int> leftView(Node *root)
 {
    // Your code here
-   
-   vector<Node*>v;
-    vector<int>a;
-    vector<int>x;
-    int i=0;
-    int f=0,t=0;
-    int j,b,h;
-    if(root==NULL)
-    {
-        return x;
-    }
-    a.push_back(root->data);
-    v.push_back(root);
-    while(1)
-    {
-        b=0;
-        t=0;
-        h=a.size();
-        for(j=i;j<h;j++)
-        {
-            //cout<<a[j]<<endl;
-            if(a[j]!=0 && t==0)
-            {
-                x.push_back(a[j]);
-                t=1;
-            }
-            if(v[j]==NULL || v[j]->left==NULL && v[j]->right==NULL)
-            {
-                continue;
-                /*a.push_back(0);
-                v.push_back(NULL);
-                a.push_back(0);
-                v.push_back(NULL);*/
-            }
-            if(v[j]->left==NULL && v[j]->right!=NULL)
-            {
-                b=1;
-                //a.push_back(0);
-                //v.push_back(NULL);
-                a.push_back(v[j]->right->data);
-                v.push_back(v[j]->right);
-            }
-            else if(v[j]->left!=NULL && v[j]->right==NULL)
-            {
-                b=1;
-                a.push_back(v[j]->left->data);
-                v.push_back(v[j]->left);
-                //a.push_back(0);
-                //v.push_back(NULL);
-            }
-            else
-            {
-                b=1;
-                a.push_back(v[j]->left->data);
-                v.push_back(v[j]->left);
-                a.push_back(v[j]->right->data);
-                v.push_back(v[j]->right);
-            }
-            
-        }
-        //cout<<a.size()<<endl;
-        if(b==0)
-        {
-            break;
-        }
-        i=h;
-        f++;
-        
-        
-    }
-    return x;
-
+   int count=0;
+   vector<int>v;
+   return(leftView1(root,v,count));
 }
