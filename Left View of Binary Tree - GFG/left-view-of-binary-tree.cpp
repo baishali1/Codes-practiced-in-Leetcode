@@ -136,7 +136,6 @@ vector<int> leftView1(Node *root,vector<int>&v,int &count)
        return v;
    }
    
-   
    if(count>v.size()){
        v.push_back(root->data);
    }
