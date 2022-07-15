@@ -23,31 +23,40 @@ class Solution
 {
     public:
     //Function to check whether a Binary Tree is BST or not.
-        vector<int> isBST1(Node* root,vector<int>&v) 
+    //inorder of BST tree is always in ascending order
+        bool isBST1(Node* root,bool &b,int &k,int &a) 
     {
         // Your code here
         if(root==NULL){
-            return v;
+            return b ;
+        }
+        if(k==1){
+           b=false;
+           return(b);
         }
 
-        isBST1(root->left,v);
-        v.push_back(root->data);
-        isBST1(root->right,v);
-        return v;
+        isBST1(root->left,b,k,a);
+        if(root->data>a){
+            a=root->data;
+        }
+        else{
+            k=1;
+            b=false;
+            return(b);
+          
+        }
+        isBST1(root->right,b,k,a);
+        return b;
     }
     
     bool isBST(Node* root) 
     {
         // Your code here
-        int i;
-        vector<int>v;
-        v=isBST1(root,v);
-        for(i=1;i<v.size();i++){
-            if(v[i]<v[i-1]){
-              return(false);  
-            }
-        }
-        return(true);
+        int a=0;
+        int k=0;
+        bool b=true;
+        return(isBST1(root,b,k,a));
+        
     }
 };
 
