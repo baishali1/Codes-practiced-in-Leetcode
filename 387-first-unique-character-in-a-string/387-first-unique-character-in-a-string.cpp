@@ -1,7 +1,7 @@
 class Solution {
 public:
     int firstUniqChar(string s) {
-        int i;
+       /* int i;
         unordered_map<char,int>mp;
         for(i=0;i<s.size();i++)
             {
@@ -14,34 +14,22 @@ public:
                 return(i);
             }
         }
-        return(-1);
-//         map<pair<int,char>,int>mp;
-             
-//         int i;
-//         char b;
+        return(-1);  */
         
-//         for(i=0;i<s.size();i++){
-//             mp[{i,s[i]}]++;
-//         }
-
-//         for(auto it=mp.begin();it!=mp.end();it++){
-//             if(it->second==1){
-//                 b=it->first.second;
-//                 break;
-//             }
-//         }
-//    /*     for(auto it=mp.begin();it!=mp.end();it++){
-//             cout<<it->first.second;
-//             cout<<it->second<<endl;
-            
-//             } */
-    
-//         for(i=0;i<s.size();i++){
-//             if(s[i]==b){
-//                return(i); 
-//             }
-//         }
-//         return(-1);
+       int i,a,b;
+        string s1;
+        s1=s;
+        sort(s1.begin(),s1.end());
+        
+        for(i=0;i<s.size();i++)
+            {
+                a=upper_bound(s1.begin(),s1.end(),s[i])-s1.begin();
+                b=lower_bound(s1.begin(),s1.end(),s[i])-s1.begin();
+                if(a-b==1){
+                  return(i);
+              }
+            }
+        return(-1);
         
     }
 };
