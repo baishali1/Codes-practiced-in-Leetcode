@@ -14,11 +14,12 @@ public:
         i=0;
         
         while(1){
-            if(n1==n){
-                return true;
-            }
+          
             if(n1>n){
                 return false;
+            }
+              else if(n1==n){
+                return true;
             }
             
             i++;
