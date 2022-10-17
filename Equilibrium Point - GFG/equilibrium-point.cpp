@@ -1,9 +1,9 @@
-// { Driver Code Starts
+//{ Driver Code Starts
 #include <iostream>
 using namespace std;
 
 
- // } Driver Code Ends
+// } Driver Code Ends
 class Solution{
     public:
     // Function to find equilibrium point in the array.
@@ -12,26 +12,46 @@ class Solution{
     int equilibriumPoint(long long a[], int n) {
     
         // Your code here
-        int sum=0;
-        int left=0;
-        int i;
-        for(i=0;i<n;i++){
-            sum+=a[i];
+        
+        int i,sum,rh;
+        sum=0;
+        
+        
+        if(n==1)
+        {
+            return(1);
         }
-        for(i=0;i<n;i++){
+        
+        for(i=0;i<n;i++)
+        {
+            sum=sum+a[i];
+        }
+        //cout<<sum<<endl;
+        rh=a[0];
+        sum=sum-a[0];
+        
+        for(i=1;i<n;i++)
+        {
             sum=sum-a[i];
-            if(left==sum){
-                return(i+1);
+            if(rh==sum)
+            {
+               return(i+1); 
             }
-            left=left+a[i];
+             else if(rh<sum)
+            {
+               rh=rh+a[i]; 
+            }
+              else if(rh>sum)
+            {
+               return(-1); 
+            }
         }
         return(-1);
-        
     }
 
 };
 
-// { Driver Code Starts.
+//{ Driver Code Starts.
 
 
 int main() {
@@ -60,4 +80,5 @@ int main() {
     }
     return 0;
 }
-  // } Driver Code Ends
+
+// } Driver Code Ends
