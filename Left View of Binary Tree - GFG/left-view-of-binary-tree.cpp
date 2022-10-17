@@ -133,12 +133,12 @@ struct Node
 
 vector<int> leftView1(Node *root,vector<int>&v,int count)
 {
-    count++;
+    
     if(root==NULL)
     {
-       count--;
        return(v);
     }
+    count++;
     
     if(count>v.size())
     {
