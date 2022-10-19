@@ -135,9 +135,9 @@ class Solution {
            node->left=NULL;
         }
         
-         
+         mirror(node->left);
           mirror(node->right);
-          mirror(node->left);
+          
           return;
        
         
