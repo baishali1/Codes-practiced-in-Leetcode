@@ -10,7 +10,7 @@ class Solution {
         // Code here
         
         vector<int>v;
-        map<int,int>visited;
+        unordered_map<int,int>visited;
         int i,j;
            i=0;
         v.push_back(0);
