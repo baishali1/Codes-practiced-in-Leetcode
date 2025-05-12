@@ -7,4 +7,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [1908-recyclable-and-low-fat-products](https://github.com/baishali1/Codes/tree/master/1908-recyclable-and-low-fat-products) |
+## Math
+|  |
+| ------- |
+| [0009-palindrome-number](https://github.com/baishali1/Codes/tree/master/0009-palindrome-number) |
 <!---LeetCode Topics End-->
