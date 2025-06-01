@@ -11,4 +11,8 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 |  |
 | ------- |
 | [0009-palindrome-number](https://github.com/baishali1/Codes/tree/master/0009-palindrome-number) |
+## String
+|  |
+| ------- |
+| [0058-length-of-last-word](https://github.com/baishali1/Codes/tree/master/0058-length-of-last-word) |
 <!---LeetCode Topics End-->
