@@ -6,6 +6,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Database
 |  |
 | ------- |
+| [0181-employees-earning-more-than-their-managers](https://github.com/baishali1/Codes/tree/master/0181-employees-earning-more-than-their-managers) |
 | [0183-customers-who-never-order](https://github.com/baishali1/Codes/tree/master/0183-customers-who-never-order) |
 | [0184-department-highest-salary](https://github.com/baishali1/Codes/tree/master/0184-department-highest-salary) |
 | [1908-recyclable-and-low-fat-products](https://github.com/baishali1/Codes/tree/master/1908-recyclable-and-low-fat-products) |
