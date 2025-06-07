@@ -6,6 +6,7 @@ Collection of LeetCode questions to ace the coding interview! - Created using [L
 ## Database
 |  |
 | ------- |
+| [0183-customers-who-never-order](https://github.com/baishali1/Codes/tree/master/0183-customers-who-never-order) |
 | [1908-recyclable-and-low-fat-products](https://github.com/baishali1/Codes/tree/master/1908-recyclable-and-low-fat-products) |
 ## Math
 |  |
